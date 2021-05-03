@@ -9,7 +9,7 @@ const storage = multer.diskStorage({
   }
 });
 
-const allowedTypes = ['text/*'];
+const allowedTypes = ['text/*', 'image/png', 'image/jpg', 'image/jpeg'];
 
 const fileFilter = (req, file, cb) => {
   if (allowedTypes.includes(file.mimetype)) {
@@ -22,5 +22,3 @@ const fileFilter = (req, file, cb) => {
 module.exports = multer({
   storage, fileFilter
 });
-
-console.log(allowedTypes);
