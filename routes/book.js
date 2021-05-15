@@ -28,9 +28,9 @@ router.get('/create', (req, res) => {
 
 router.post('/create', (req, res) => {
     const {books} = stor;
-    const {title, desc} = req.body;
+    const {title, desc, authors, favorite, fileCover} = req.body;
 
-    const newBook = new Book(title, desc);
+    const newBook = new Book(title, desc, authors, favorite, fileCover);
     books.push(newBook);
 
     res.redirect('/book')
@@ -69,7 +69,7 @@ router.get('/update/:id', (req, res) => {
 router.post('/update/:id', (req, res) => {
     const {books} = stor;
     const {id} = req.params;
-    const {title, desc} = req.body;
+    const {title, desc, authors, favorite, fileCover} = req.body;
     const idx = books.findIndex(el => el.id === id);
 
     if (idx !== -1) {
@@ -77,6 +77,9 @@ router.post('/update/:id', (req, res) => {
             ...books[idx],
             title,
             desc,
+            authors,
+            favorite,
+            fileCover
         };
         res.redirect(`/book/${id}`);
     } else {
@@ -97,4 +100,4 @@ router.post('/delete/:id', (req, res) => {
     }
 });
 
-module.exports = router;  
+module.exports = router;   

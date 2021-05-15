@@ -7,8 +7,11 @@
         <div class="card">
             <div class="card-body">
 
-                <h5 class="card-title"><%= books.title %></h5>
-                <p class="card-text"><%= books.desc %>.</p>
+                <h5 class="card-title"><%= `Название книги: ${books.title}` %></h5>
+                <p class="card-text"><%= `Содержание: ${books.desc}` %></p>
+                <p class="card-text"><%= `Автор: ${books.authors}` %></p>
+                <p class="card-text"><%= `Избранное: ${books.favorite}` %></p>
+                <p class="card-text"><%= `Обложка: ${books.fileCover}` %></p>
 
                 <div class="text-right">
                     <a class="btn btn-sm btn-primary" href="/book/update/<%= books.id %>">

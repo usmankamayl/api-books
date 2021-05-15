@@ -17,7 +17,30 @@
               id="inputDesc"
       ><%= books.desc %></textarea>
   </div>
-
+  <div class="form-group">
+    <label for="inputAuthors">Автор</label>
+    <input type="text"
+           value="<%= books.authors %>"
+           name="authors"
+           class="form-control"
+           id="inputAuthors">
+  </div>
+  <div class="form-group">
+    <label for="inputFavorite">Избранное</label>
+    <input type="text"
+           value="<%= books.favorite %>"
+           name="favorite"
+           class="form-control"
+           id="inputFavorite">
+  </div>
+  <div class="form-group">
+    <label for="inputFileCover">Обложка</label>
+    <input type="text"
+           value="<%= books.fileCover %>"
+           name="fileCover"
+           class="form-control"
+           id="inputFileCover">
+  </div>
   <div class="form-group text-right ">
       <button type="submit" class="btn btn-primary">Сохранить</button>
   </div>
