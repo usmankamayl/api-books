@@ -58,7 +58,7 @@ router.get('/update/:id', (req, res) => {
 
     if (idx !== -1) {
         res.render("book/update", {
-            title: "Book | view",
+            title: "Book | update",
             books: books[idx],
         });
     } else {
