@@ -17,7 +17,8 @@
     "express-form-data": "^2.0.16",
     "mongoose": "^6.0.11",
     "multer": "^1.4.2",
-    "node-random-id": "^1.0.1"
+    "node-random-id": "^1.0.1",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "dotenv": "^9.0.2",
